@@ -1,6 +1,10 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n({ useScope: 'global' })
+
 useHead({
-  title: 'Resume',
+  title: locale === 'en' ? 'Resume' : 'Pengalaman',
 })
 </script>
 
@@ -19,51 +23,20 @@ useHead({
         </div>
 
         <h3 class="h3">
-          Education
+          {{ locale === 'en' ? 'Education' : 'Pendidikan' }}
         </h3>
       </div>
 
       <ol class="timeline-list">
         <li class="timeline-item">
           <h4 class="h4 timeline-item-title">
-            University school of the arts
+            STMIK Tasikmalaya
           </h4>
 
-          <span>2007 — 2008</span>
+          <span>2018 — 2022</span>
 
           <p class="timeline-text">
-            Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-            quas molestias
-            exceptur.
-          </p>
-        </li>
-
-        <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">
-            New york academy of art
-          </h4>
-
-          <span>2006 — 2007</span>
-
-          <p class="timeline-text">
-            Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda
-            est
-            omnis..
-          </p>
-        </li>
-
-        <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">
-            High school of art and design
-          </h4>
-
-          <span>2002 — 2004</span>
-
-          <p class="timeline-text">
-            Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed
-            consequuntur
-            magni dolores
-            eos.
+            {{ locale === 'en' ? 'Information Technology - Bachelor' : 'Teknologi Informasi - Sarjana' }}
           </p>
         </li>
       </ol>
@@ -76,51 +49,32 @@ useHead({
         </div>
 
         <h3 class="h3">
-          Experience
+          {{ locale === 'en' ? 'Experience' : 'Pengalaman' }}
         </h3>
       </div>
 
       <ol class="timeline-list">
         <li class="timeline-item">
           <h4 class="h4 timeline-item-title">
-            Creative director
+            Velo Technology - Programmer
           </h4>
 
-          <span>2015 — Present</span>
+          <span>2022 — {{ locale === 'en' ? 'Present' : 'Sekarang' }}</span>
 
           <p class="timeline-text">
-            Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-            qvuas
-            molestias
-            exceptur.
+            -
           </p>
         </li>
 
         <li class="timeline-item">
           <h4 class="h4 timeline-item-title">
-            Art director
+            Freelancer - Web Developer
           </h4>
 
-          <span>2013 — 2015</span>
+          <span>2021 — {{ locale === 'en' ? 'Present' : 'Sekarang' }}</span>
 
           <p class="timeline-text">
-            Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-            quas molestias
-            exceptur.
-          </p>
-        </li>
-
-        <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">
-            Web designer
-          </h4>
-
-          <span>2010 — 2013</span>
-
-          <p class="timeline-text">
-            Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-            quas molestias
-            exceptur.
+            {{ locale === 'en' ? 'Build powerfull website based on client needs' : 'Bangun situs web yang kuat berdasarkan kebutuhan klien' }}
           </p>
         </li>
       </ol>
@@ -128,14 +82,39 @@ useHead({
 
     <section class="skill">
       <h3 class="h3 skills-title">
-        My skills
+        {{ locale === 'en' ? 'My skills' : 'Skill saya' }}
       </h3>
 
       <ul class="skills-list content-card">
         <li class="skills-item">
           <div class="title-wrapper">
             <h5 class="h5">
-              Web design
+              HTML
+            </h5>
+            <data value="100">100%</data>
+          </div>
+
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 100%;" />
+          </div>
+        </li>
+
+        <li class="skills-item">
+          <div class="title-wrapper">
+            <h5 class="h5">
+              CSS
+            </h5>
+            <data value="80">80%</data>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 80%;" />
+          </div>
+        </li>
+
+        <li class="skills-item">
+          <div class="title-wrapper">
+            <h5 class="h5">
+              Javascript
             </h5>
             <data value="80">80%</data>
           </div>
@@ -148,39 +127,39 @@ useHead({
         <li class="skills-item">
           <div class="title-wrapper">
             <h5 class="h5">
-              Graphic design
+              SQL Databases (MySQL, PostgreSQL)
             </h5>
-            <data value="70">70%</data>
+            <data value="80">80%</data>
           </div>
 
           <div class="skill-progress-bg">
-            <div class="skill-progress-fill" style="width: 70%;" />
+            <div class="skill-progress-fill" style="width: 80%;" />
           </div>
         </li>
 
         <li class="skills-item">
           <div class="title-wrapper">
             <h5 class="h5">
-              Branding
+              PHP (Laravel)
             </h5>
-            <data value="90">90%</data>
+            <data value="85">85%</data>
           </div>
 
           <div class="skill-progress-bg">
-            <div class="skill-progress-fill" style="width: 90%;" />
+            <div class="skill-progress-fill" style="width: 85%;" />
           </div>
         </li>
 
         <li class="skills-item">
           <div class="title-wrapper">
             <h5 class="h5">
-              WordPress
+              Vue JS
             </h5>
-            <data value="50">50%</data>
+            <data value="80">80%</data>
           </div>
 
           <div class="skill-progress-bg">
-            <div class="skill-progress-fill" style="width: 50%;" />
+            <div class="skill-progress-fill" style="width: 80%;" />
           </div>
         </li>
       </ul>
